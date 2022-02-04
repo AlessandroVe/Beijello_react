@@ -110,5 +110,17 @@
 	},
 	"TicketList": {
 		"AddTicket": "Aggiungi ticket"
+	},
+	"RemoveWorkspace": {
+		"Title": "Sei sicuro di voler cancellare questo spazio di lavoro?",
+		"Subtitle": "L'azione è irreversibile",
+		"No": "No",
+		"Yes": "Sì"
+	},
+	"RemoveBoard": {
+		"Title": "Sei sicuro di voler cancellare questa bacheca?",
+		"Subtitle": "L'azione è irreversibile",
+		"No": "No",
+		"Yes": "Sì"
 	}
 }

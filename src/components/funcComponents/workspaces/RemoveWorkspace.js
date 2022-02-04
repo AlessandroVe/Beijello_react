@@ -8,12 +8,14 @@ import { connect } from "react-redux";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { toast } from "react-toastify";
 import workspacesApi from "../../../services/workspacesApi";
+import { useTranslation } from "react-i18next";
 
 const RemoveWorkspace = (props) => {
 	const [state, setState] = React.useState({
 		showModal: false,
 	});
 
+	const { t } = useTranslation();
 	const hideModal = () => {
 		setState({ ...state, showModal: false });
 	};
@@ -48,14 +50,13 @@ const RemoveWorkspace = (props) => {
 			{state.showModal && (
 				<Modal className="workspace-confirm-delete-modal">
 					<p>
-						Are you sure you want to delete this
-						workspace?
+						{t("RemoveWorkspace.Title")}
 					</p>
-					<p>This action will be irreversible.</p>
+					<p>{t("RemoveWorkspace.Subtitle")}</p>
 					<div>
-						<button onClick={hideModal}>No</button>
+						<button onClick={hideModal}>{t("RemoveWorkspace.No")}</button>
 						<button onClick={deleteWorkspace}>
-							Yes
+						{t("RemoveWorkspace.Yes")}
 						</button>
 					</div>
 				</Modal>

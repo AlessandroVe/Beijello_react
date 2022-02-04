@@ -113,5 +113,17 @@
 	},
 	"TicketList": {
 		"AddTicket": "Add ticket"
+	},
+	"RemoveWorkspace": {
+		"Title": "Are you sure you want to delete this workspace?",
+		"Subtitle": "This action will be irreversible",
+		"No": "No",
+		"Yes": "Yes"
+	},
+	"RemoveBoard": {
+		"Title": "Are you sure you want to delete this workspace?",
+		"Subtitle": "This action will be irreversible",
+		"No": "No",
+		"Yes": "Yes"
 	}
 }

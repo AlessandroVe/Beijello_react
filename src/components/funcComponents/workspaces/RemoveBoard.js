@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { toast } from "react-toastify";
 import workspacesApi from "../../../services/workspacesApi";
+import { useTranslation } from "react-i18next";
 
 const mapStateToProps = (state) => ({
 	workspaces: state.workspacesDuck.workspaces,
@@ -18,6 +19,8 @@ const RemoveBoard = (props) => {
 	const [state, setState] = React.useState({
 		showModal: false,
 	});
+
+	const {t} = useTranslation();
 
 	const hideModal = () => {
 		setState({ ...state, showModal: false });
@@ -63,11 +66,11 @@ const RemoveBoard = (props) => {
 			</span>
 			{state.showModal && (
 				<Modal className="board-confirm-delete-modal">
-					<p>Are you sure you want to delete this board?</p>
-					<p>This action will be irreversible.</p>
+					<p>{t("RemoveBoard.Title")}</p>
+					<p>{t("RemoveBoard.Subtitle")}</p>
 					<div>
-						<button onClick={hideModal}>No</button>
-						<button onClick={deleteBoard}>Yes</button>
+						<button onClick={hideModal}>{t("RemoveBoard.No")}</button>
+						<button onClick={deleteBoard}>{t("RemoveBoard.Yes")}</button>
 					</div>
 				</Modal>
 			)}
